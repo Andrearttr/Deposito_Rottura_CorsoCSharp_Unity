@@ -11,6 +11,9 @@ public class PlayerMovementRotate : MonoBehaviour
     [SerializeField] private Vector3 _rotation;
     [SerializeField] private bool _isOnGround = false;
     [SerializeField] private float _jumpForce = 5f;
+    [SerializeField] public bool IsAlive = true;
+    [SerializeField] private float _respawnCooldown = 5f;
+    [SerializeField] public bool HasWon = false;
 
     void Start()
     {
@@ -19,9 +22,27 @@ public class PlayerMovementRotate : MonoBehaviour
 
     void Update()
     {
-        Movement();
-        JumpMechanic();
-        transform.Rotate(_rotation * RotationSpeed * Time.deltaTime);
+        if (HasWon)
+        {
+            _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else if (IsAlive)
+        {
+            Movement();
+            JumpMechanic();
+            transform.Rotate(_rotation * RotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            _respawnCooldown -= Time.deltaTime;
+            if (_respawnCooldown <= 0)
+            {
+                IsAlive = true;
+                _respawnCooldown = 5f;
+                _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -62,13 +83,11 @@ public class PlayerMovementRotate : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            //transform.Rotate(0, -1, 0);
             _rotation -= transform.up;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            //transform.Rotate(0, 1, 0);
             _rotation += transform.up;
         }
     }
