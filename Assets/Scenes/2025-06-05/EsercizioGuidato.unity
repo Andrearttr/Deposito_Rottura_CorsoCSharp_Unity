@@ -689,6 +689,18 @@ PrefabInstance:
       propertyPath: _spawnpoint
       value: 
       objectReference: {fileID: 950249704}
+    - target: {fileID: 1959973949548659649, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
+      propertyPath: _timerTextObject
+      value: 
+      objectReference: {fileID: 1387762592}
+    - target: {fileID: 1959973949548659649, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
+      propertyPath: _defeatTextObject
+      value: 
+      objectReference: {fileID: 717231481}
+    - target: {fileID: 1959973949548659649, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
+      propertyPath: _victoryTextObject
+      value: 
+      objectReference: {fileID: 1131437000}
     - target: {fileID: 8127225419390933881, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.016340852
@@ -736,13 +748,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8285656759499840818, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1114424914}
-    - targetCorrespondingSourceObject: {fileID: 8285656759499840818, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1114424915}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
 --- !u!1001 &275829619
 PrefabInstance:
@@ -1715,40 +1721,6 @@ Transform:
   - {fileID: 950249704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1114424907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8285656759499840818, guid: 3332105345113dd4c85dcac80583ade0, type: 3}
-  m_PrefabInstance: {fileID: 206536934}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1114424914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114424907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38342f8fd88982245b0c5364c146f2ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Timer: 0
-  _timerTextObject: {fileID: 1387762592}
-  _defeatTextObject: {fileID: 717231481}
-  _victoryTextObject: {fileID: 1131437000}
-  _playerMovement: {fileID: 0}
---- !u!114 &1114424915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114424907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928ee12c0d025ad409b060cb4c913d13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1131436998
 GameObject:
   m_ObjectHideFlags: 0

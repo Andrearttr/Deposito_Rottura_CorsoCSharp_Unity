@@ -12,7 +12,7 @@ public class PlayerMovementRotate : MonoBehaviour
     [SerializeField] private bool _isOnGround = false;
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] public bool IsAlive = true;
-    [SerializeField] private float _respawnCooldown = 5f;
+    [SerializeField] private float _respawnCooldown = 3f;
     [SerializeField] public bool HasWon = false;
 
     void Start()
@@ -39,7 +39,7 @@ public class PlayerMovementRotate : MonoBehaviour
             if (_respawnCooldown <= 0)
             {
                 IsAlive = true;
-                _respawnCooldown = 5f;
+                _respawnCooldown = 3f;
                 _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             }
         }

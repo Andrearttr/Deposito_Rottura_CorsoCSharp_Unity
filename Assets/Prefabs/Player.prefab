@@ -152,6 +152,8 @@ GameObject:
   - component: {fileID: 5906202900506633310}
   - component: {fileID: 1824547532715608744}
   - component: {fileID: 1271394900589596186}
+  - component: {fileID: 1959973949548659649}
+  - component: {fileID: 4162284193468763790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -297,6 +299,9 @@ MonoBehaviour:
   _rotation: {x: 0, y: 0, z: 0}
   _isOnGround: 0
   _jumpForce: 5
+  IsAlive: 1
+  _respawnCooldown: 3
+  HasWon: 0
 --- !u!114 &1271394900589596186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,3 +315,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnpoint: {fileID: 0}
+--- !u!114 &1959973949548659649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8285656759499840818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38342f8fd88982245b0c5364c146f2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 0
+  _timerTextObject: {fileID: 0}
+  _defeatTextObject: {fileID: 0}
+  _victoryTextObject: {fileID: 0}
+  _playerMovement: {fileID: 0}
+--- !u!114 &4162284193468763790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8285656759499840818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928ee12c0d025ad409b060cb4c913d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
